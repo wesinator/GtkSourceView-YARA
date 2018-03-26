@@ -8,6 +8,7 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
 
 <language id="yara" _name="YARA" version="2.0" _section="Other">
   <metadata>
+    <property name="mimetypes">text/x-yara</property>
     <property name="globs">*.yara;*.yar</property>
     <property name="line-comment-start">//</property>
     <property name="block-comment-start">/*</property>
