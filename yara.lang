@@ -124,6 +124,7 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
       <keyword>uint16be</keyword>
       <keyword>uint32be</keyword>
       <keyword>wide</keyword>
+      <keyword>xor</keyword>
     </context>
 
     <context id="boolean" style-ref="boolean">
