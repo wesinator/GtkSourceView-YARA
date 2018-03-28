@@ -53,8 +53,8 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
       </include>
     </context>
 
-    <!-- Match on YARA hex strings -->
-    <context id="hex-string" style-ref="string">
+    <!-- Match on YARA hex string chars -->
+    <context id="hex-string" style-ref="hexadecimal">
       <match extended="true">
         (?&lt;![\w\.])
         ([a-fA-F0-9?]{2})+
