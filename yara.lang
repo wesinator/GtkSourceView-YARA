@@ -19,6 +19,7 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
     <style id="comment"           _name="Comment"               map-to="def:comment"/>
     <style id="include"           _name="Include"               map-to="def:preprocessor"/>
     <style id="keyword"           _name="Keyword"               map-to="def:keyword"/>
+    <style id="rule"              _name="Rule"                  map-to="def:function"/>
     <style id="string"            _name="String"                map-to="def:string"/>
     <style id="escaped-character" _name="Escaped Character"     map-to="def:special-char"/>
     <style id="decimal"           _name="Decimal number"        map-to="def:decimal"/>
@@ -86,6 +87,20 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
       </match>
     </context>
 
+    <!-- 'rule' is also present in the 'keywords' context, but has a lower
+         priority, so 'rule' is highlighted even if the rule name doesn't match. -->
+    <context id="rule">
+      <match extended="true">
+        (rule)
+        \s+
+        ([a-zA-Z_]\w{0,127})
+      </match>
+      <include>
+        <context sub-pattern="1" style-ref="keyword"/>
+        <context sub-pattern="2" style-ref="rule"/>
+      </include>
+    </context>
+
     <context id="keywords" style-ref="keyword">
       <keyword>all</keyword>
       <keyword>and</keyword>
@@ -144,6 +159,7 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
         <context ref="hexadecimal"/>
         <context ref="invalid-hexadecimal"/>
         <context ref="decimal"/>
+        <context ref="rule"/>
         <context ref="keywords"/>
         <context ref="boolean"/>
       </include>
