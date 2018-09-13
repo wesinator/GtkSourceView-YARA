@@ -7,6 +7,6 @@ This package provides [YARA](https://virustotal.github.io/yara/) syntax highligh
 Save `yara.lang` to `~/.local/share/gtksourceview-3.0/language-specs/`:
 
 ```sh
-mkdir -p ~/.local/share/gtksourceview-3.0/language-specs/
+mkdir -pv ~/.local/share/gtksourceview-3.0/language-specs/
 cp ./yara.lang ~/.local/share/gtksourceview-3.0/language-specs/
 ```
