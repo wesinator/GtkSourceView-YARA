@@ -107,6 +107,8 @@ You can obtain one at http://mozilla.org/MPL/2.0/.
       <keyword>any</keyword>
       <keyword>ascii</keyword>
       <keyword>at</keyword>
+      <keyword>base64</keyword>
+      <keyword>base64wide</keyword>
       <keyword>condition</keyword>
       <keyword>contains</keyword>
       <keyword>entrypoint</keyword> <!-- being deprecated-->
